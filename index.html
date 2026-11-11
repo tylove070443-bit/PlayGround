@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0c11" />
+  <title>Riftbound — League Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Riftbound home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>RIFTBOUND</strong><small>LEAGUE MANAGER</small></span>
+      </a>
+      <div class="club-switcher"><div class="club-crest">N</div><div><strong>NORTHSTAR</strong><small>PRO TEAM · LCK</small></div><span class="chevron">⌄</span></div>
+      <div class="nav-label">MANAGEMENT</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">◈</span>Command center</button>
+        <button class="nav-item" data-view="roster"><span class="nav-icon">♟</span>Squad <span class="nav-count" id="roster-nav-count">5</span></button>
+        <button class="nav-item" data-view="schedule"><span class="nav-icon">▦</span>Schedule</button>
+        <button class="nav-item" data-view="scouting"><span class="nav-icon">⌕</span>Scouting</button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-season"><span class="season-icon">✦</span><div><strong>SPRING SPLIT</strong><small>SEASON 01 · 2025</small></div><span class="live-dot"></span></div>
+      <div class="manager-card"><div class="manager-avatar">CM</div><div><strong>Coach Morgan</strong><small>Head Coach</small></div><button aria-label="Manager options">•••</button></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb"><span>TEAM MANAGEMENT</span><i>/</i><strong id="page-title">COMMAND CENTER</strong></div>
+        <div class="topbar-right"><div class="season-pill"><span class="live-dot"></span> SEASON IN PROGRESS</div><button class="icon-button" id="sound-toggle" aria-label="Toggle sound">♬</button><button class="icon-button help-button" id="help-button" aria-label="How to play">?</button></div>
+      </header>
+      <div class="view-container" id="view-container"></div>
+      <footer class="footer"><span>RIFTBOUND <b>·</b> THE RIFT IS YOURS TO COMMAND</span><button id="reset-game">RESET SAVE</button></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden><section class="modal" id="modal" role="dialog" aria-modal="true"></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
